@@ -12,9 +12,6 @@ class Conjunto
 	public function lista() {
 		return $this->lista;
 	}
-	// public function subgrupos() {
-	// 	return $this->subgrupos;
-	// }
 	public function tamanho() {
 		return count($this->lista);
 	}
@@ -65,22 +62,29 @@ class Conjunto
 			return true;
 		} else if ($quantidade > 1) {
 			do {
-				if ($this->lista[$i+1] == $this->lista[$i]+1) {
+				if ($i == $quantidade - 1) {
 					$array_temp[$j] = $this->lista[$i];
-					$j++;
+					$subgrupos[$indice_subgrupo] = $array_temp;					
 				} else {
-					// O último elemento será inserido
-					$array_temp[$j] = $this->lista[$i];
-					$subgrupos[$indice_subgrupo] = $array_temp;
-					$j = 0;
-					$array_temp = [];
-					$indice_subgrupo++;
-				}		
+	 				if ($this->lista[$i+1] == $this->lista[$i]+1) {
+						$array_temp[$j] = $this->lista[$i];
+						$j++;
+					} else {
+						// O último elemento será inserido
+						$array_temp[$j] = $this->lista[$i];
+						$subgrupos[$indice_subgrupo] = $array_temp;
+						$j = 0;
+						$array_temp = [];
+						$indice_subgrupo++;
+					}			
+				}
 				$i++;
-			} while($i < $quantidade-1);
-			
+			} while($i < $quantidade);
+				// echo "Vendo subgrupos";
+				// foreach ( $subgrupos as $var ) {
+				//     echo "\n", $var[0];
+				// }
 			return true;
-
 		} else {
 			return false;
 		}

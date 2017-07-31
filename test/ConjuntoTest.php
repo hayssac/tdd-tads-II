@@ -27,8 +27,8 @@ class ConjuntoTest extends TestCase
 
 	// Classe válida: se os subgrupos são formados corretamente
 	public function testSubgruposEstaContidoNaLista() {
-		$stub = new Conjunto([12, 13, 14, 20, 21, 30]);
-
+		$stub = new Conjunto([12, 13, 14, 20, 21, 30, 31]);
+		
 		$this->assertEquals(true, $stub->formarSubgrupos());
 	}
 
