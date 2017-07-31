@@ -20,3 +20,19 @@
 | Caso 3 |                      | subgrupos ∈ lista              |                  | true           |
 | Caso 4 |                      |                                | lista = vazia     | false          |
 
+## Instalando pacotes
+
+**Requisitos:**
+
+* Composer
+
+```
+composer install
+```
+
+## Executando testes
+
+```
+vendor/bin/phpunit  --bootstrap src/Conjunto.php test/ConjuntoTest.php            
+```
+
