@@ -2,7 +2,7 @@
 
 class Conjunto
 {
-	private $lista;
+	private $lista = [];
 
 	function __construct($lista)
 	{
@@ -11,7 +11,9 @@ class Conjunto
 	public function lista() {
 		return $this->lista;
 	}
-	public function tamanho() {}
+	public function tamanho() {
+		return count($this->lista);
+	}
 	public function emOrdem() {}
 	public function isSubgrupoValido() {}
 	public function formarSubgrupos() {}
