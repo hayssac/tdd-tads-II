@@ -13,10 +13,10 @@
 
 ### Plano Teste
 
-| Variavéis de Entrada | Classes Válidas                | Classes Inválidas | Saida esperada |
-| -------------------- | ------------------------------ | ----------------- | -------------- |
-| lista : inteiros[]   | lista[i+1] = lista [i] + 1     |                   | true           |
-|                      | lista[i+1] >= lista[i]         |                   | true           |
-|                      | subgrupos ∈ lista              |                   | true           |
+|  Caso  | Variavéis de Entrada | Classes Válidas                | Classes Inválidas | Saida esperada |
+| ------ | -------------------- | ------------------------------ | ----------------- | -------------- |
+| Caso 1 | lista : inteiros[]   | lista[i+1] = lista [i] + 1     |                   | true           |
+| Caso 2 |                      | lista[i+1] >= lista[i]         |                   | true           |
+| Caso 3 |                      | subgrupos ∈ lista              |                   | true           |
 
 
