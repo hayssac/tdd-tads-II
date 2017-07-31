@@ -21,7 +21,16 @@ class ConjuntoTest extends TestCase
 
 		$this->assertEquals(true, $stub->emOrdem());
 	}
-	
+
+	// Classe válida: Se é subgrupo válido
+	public function testSubgrupoValido() {
+		$stub = $this->createMock(Conjunto::class);
+		
+		$stub->method('isSubgrupoValido')->will($this->returnValue(true));
+
+		$this->assertEquals(true, $stub->isSubgrupoValido());
+	}
+
 }
 
 
