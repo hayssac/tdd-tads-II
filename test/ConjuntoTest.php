@@ -12,6 +12,16 @@ class ConjuntoTest extends TestCase
         
         $this->assertEquals(0, $stub->tamanho());
 	}
+
+	// Classe válida: Lista está ordenada
+	public function testListaEstaOrdenada() {
+		$stub = $this->createMock(Conjunto::class);
+
+		$stub->method('emOrdem')->will($this->returnValue(true));
+
+		$this->assertEquals(true, $stub->emOrdem());
+	}
+	
 }
 
 
