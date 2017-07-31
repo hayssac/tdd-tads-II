@@ -14,6 +14,7 @@ class Conjunto
 	public function tamanho() {}
 	public function emOrdem() {}
 	public function isSubgrupoValido() {}
+	public function formarSubgrupos() {}
 }
 
 ?>
