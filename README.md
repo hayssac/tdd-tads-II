@@ -35,6 +35,6 @@ composer install
 ## Executando testes
 
 ```
-vendor/bin/phpunit  --bootstrap src/Conjunto.php test/ConjuntoTest.php            
+vendor/bin/phpunit  --bootstrap src/Conjunto.php test/ConjuntoTest.php --colors
 ```
 
