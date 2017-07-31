@@ -12,6 +12,9 @@ class Conjunto
 	public function lista() {
 		return $this->lista;
 	}
+	// public function subgrupos() {
+	// 	return $this->subgrupos;
+	// }
 	public function tamanho() {
 		return count($this->lista);
 	}
@@ -50,7 +53,39 @@ class Conjunto
 			return false;
 		}		
 	}
-	public function formarSubgrupos() {}
+	public function formarSubgrupos() {
+		$quantidade = $this->tamanho($this->lista);
+		$array_temp = [];
+		$i = 0;
+		$j = 0;
+		$indice_subgrupo = 0;
+
+		if ($quantidade == 1) {
+			$subgrupos[0] = [$this->lista[0]];
+			return true;
+		} else if ($quantidade > 1) {
+			do {
+				if ($this->lista[$i+1] == $this->lista[$i]+1) {
+					$array_temp[$j] = $this->lista[$i];
+					$j++;
+				} else {
+					// O último elemento será inserido
+					$array_temp[$j] = $this->lista[$i];
+					$subgrupos[$indice_subgrupo] = $array_temp;
+					$j = 0;
+					$array_temp = [];
+					$indice_subgrupo++;
+				}		
+				$i++;
+			} while($i < $quantidade-1);
+			
+			return true;
+
+		} else {
+			return false;
+		}
+
+	}
 }
 
 ?>

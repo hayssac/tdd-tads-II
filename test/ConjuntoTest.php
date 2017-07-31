@@ -25,15 +25,11 @@ class ConjuntoTest extends TestCase
 		$this->assertEquals(true, $stub->isSubgrupoValido());
 	}
 
-	public function testSubgrupoEstaContidoNaLista() {
-		$stub = $this->createMock(Conjunto::class);
+	// Classe válida: se os subgrupos são formados corretamente
+	public function testSubgruposEstaContidoNaLista() {
+		$stub = new Conjunto([12, 13, 14, 20, 21, 30]);
 
-		$stub->method('lista')->will($this->returnValue([12, 13, 14, 20, 21, 30]));
-
-		$stub->method('formarSubgrupos')->will($this->returnValue([[12, 13, 14], [20, 21], [30]]));
-
-		$this->assertEquals([[12, 13, 14], [20, 21], [30]], $stub->formarSubgrupos());
-
+		$this->assertEquals(true, $stub->formarSubgrupos());
 	}
 
 }
